@@ -1,0 +1,13 @@
+:root {
+		--color-strong: #ebebeb;
+		--color-main: #e3dede;
+		--color-dim: #a2a2a2;
+		--accent-strong: #0676a2;
+		--accent-main: #0f9ad2;
+		--accent-dim: #a8dff5;
+		--highlight-color: rgba(15, 154, 210, 0.8);
+		--selection-color: rgba(15, 154, 210, 0.2);
+		--background-dark: #212121;
+		--background-darker: #121212;
+		--background-darkest: #050505;
+	}

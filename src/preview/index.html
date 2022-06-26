@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>furret.css - Ray Arayilakath</title>
+
+		<meta name="title" content="css - Ray Arayilakath" />
+		<meta
+			name="description"
+			content="My personal website theming and styling toolkit."
+		/>
+		<meta name="keywords" content="css, styles, themes, typography, furrets" />
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="English" />
+		<meta name="author" content="Ray Arayilakath" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		/>
+		<link rel="stylesheet" href="/css/library.min.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>furret.css</h1>
+			<p>
+				My personal website styling toolkit, modeled after the lovely
+				<a href="https://watercss.kognise.dev"> Water.css</a> by Kognise.
+				Written to allow quick and beautiful styling for simple document-like
+				websites. Grab a copy <a href="#">here</a>.
+			</p>
+			<p>
+				Or more simply, paste the following into the
+				<code>&#60;head&#62;</code> of your HTML:
+			</p>
+			<pre><code>&#60;link rel="stylesheet" href="https://css.furret.codes/light.min.css" /&#62;</code></pre>
+
+			<p>
+				In addition to a light and dark theme, furret.css can also be extended
+				using CSS variables in the <code>:root</code> element (see below).
+			</p>
+			<pre><code>:root {
+  --color-strong: #000000;
+  --color-main: #434242;
+  --color-dim: #737373;
+
+  --accent-strong: #0676a2;
+  --accent-main: #7ddaff;
+  --accent-dim: #a8dff5;
+
+  --highlight-color: rgba(125, 218, 255, 0.8);
+
+  --background-main: #ffffff;
+  --background-dark: #f5f5f5;
+  --background-darker: #e3e3e3;
+}</code></pre>
+
+			<h1>Typography</h1>
+
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+				perspiciatis iste a, quisquam nemo aut sit eligendi exercitationem iure
+				tempore laborum necessitatibus ab odio ad, veniam debitis voluptatibus
+				possimus perferendis. This is <strong>strong</strong>, this is
+				<b>bold</b>, this is <em>emphasized</em>, and this is
+				<a href="#">linked</a>.
+			</p>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+
+			<blockquote
+				cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+			>
+				<p>
+					"The HTML blockquote Element (or HTML Block Quotation Element)
+					indicates that the enclosed text is an extended quotation. Usually,
+					this is rendered visually by indentation (see
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#Usage_notes"
+					>
+						Notes
+					</a>
+					for how to change it). A URL for the source of the quotation may be
+					given using the <code>cite</code> attribute, while a text
+					representation of the source can be given using the
+					<code>&lt;cite&gt;</code> cite element."
+				</p>
+
+				<footer>
+					<cite>MDN, "The Block Quotation element"</cite>
+				</footer>
+			</blockquote>
+
+			<p>
+				This is <code>inline-code</code>, this is <kbd>CTRL+C</kbd> (keyboard)
+				and this is a block of preformatted text:
+			</p>
+
+			<pre><code>// Hello World in Javascript
+function main() {
+  console.log('Hello World');
+}
+
+main();</code></pre>
+
+			<p>This is an unordered list:</p>
+			<ul>
+				<li>
+					<p>Item A</p>
+				</li>
+				<li>
+					<p>Item B</p>
+				</li>
+				<li>
+					<p>Item C</p>
+				</li>
+			</ul>
+
+			<p>This is an ordered list:</p>
+			<ol>
+				<li>
+					<p>Item 1</p>
+				</li>
+				<li>
+					<p>Item 2</p>
+				</li>
+				<li>
+					<p>Item 3</p>
+				</li>
+			</ol>
+
+			<h1>Forms</h1>
+
+
+			<form method="GET" action="/">
+				<header>Basic Form Fields</header>
+				<flex-break></flex-break>
+				<p>
+					This form has some basic fields such as: <code>text</code>,
+					<code>password</code>, <code>disabled</code>, <code>reset</code> and
+					<code>submit</code>.
+				</p>
+				<flex-break></flex-break>
+
+				<label for="text">Text Field:</label>
+				<input
+					id="text"
+					type="text"
+					name="text"
+					placeholder="Insert some text..."
+				/>
+
+				<label for="password">Password Field:</label>
+				<input
+					id="password"
+					type="password"
+					name="password"
+					placeholder="Insert a password..."
+				/>
+
+				<label for="textarea">Textarea Field:</label>
+				<textarea
+					id="textarea"
+					type="textarea"
+					name="textarea"
+					placeholder="Insert some text..."
+				></textarea>
+
+				<label for="disabled">Disabled Field:</label>
+				<input id="disabled" type="password" disabled />
+
+				<input type="submit" />
+				<input type="reset" />
+			</form>
+
+
+			<form method="GET" action="/">
+				<header>Switch Form Fields</header>
+				<flex-break/></flex-break>
+				<p>
+					This form has switch fields such as: <code>checkbox</code> and
+					<code>radio</code>.
+				</p>
+				<flex-break></flex-break>
+
+				<fieldset>
+					<legend>Checkbox</legend>
+
+					<input id="checkbox" type="checkbox" name="checkbox" />
+					<label for="checkbox">Checkbox Field</label>
+					<flex-break></flex-break>
+
+					<input id="checkbox-disabled" type="checkbox" name="checkbox" disabled />
+					<label for="checkbox-disabled">Disabled Checkbox Field</label>
+					<flex-break></flex-break>
+				</fieldset>
+
+				<fieldset>
+					<legend>Radios</legend>
+
+					<input id="radio-1" type="radio" name="radio" />
+					<label for="radio-1">Radio Field 1</label>
+					<flex-break></flex-break>
+	
+					<input id="radio-2" type="radio" name="radio" checked />
+					<label for="radio-2">Radio Field 2</label>
+					<flex-break></flex-break>
+	
+					<input id="radio-3" type="radio" name="radio" disabled />
+					<label for="radio-3">Radio Field 3</label>
+					<flex-break></flex-break>
+				</fieldset>
+
+				<input type="submit" />
+			</form>
+
+			<form method="GET" action="/">
+				<header>Time Form Fields</header>
+				<flex-break/></flex-break>
+				<p>
+					This form has time fields such as: <code>date</code>,
+					<code>datetime-local</code>, <code>month</code>, <code>time</code> and
+					<code>week</code>.
+				</p>
+				<flex-break></flex-break>
+
+				<input type="submit" />
+			</form>
+
+			<form method="GET" action="/">
+				<header>Numerical Form Fields</header>
+				<flex-break/></flex-break>
+				<p>
+					This form has numerical fields such as: <code>number</code> and
+					<code>range</code>.
+				</p>
+				<flex-break></flex-break>
+
+				<input type="submit" />
+			</form>
+
+			<form method="GET" action="/">
+				<header>FileData Form Fields</header>
+				<flex-break/></flex-break>
+				<p>
+					This form has filedata fields such as: <code>file</code> and
+					<code>image</code>.
+				</p>
+				<flex-break></flex-break>
+
+				<input type="submit" />
+			</form>
+
+			<footer>
+				Made with ❤ by <a href="https://www.furret.codes">@RayhanADev</a>
+			</footer>
+		</div>
+	</body>
+</html>

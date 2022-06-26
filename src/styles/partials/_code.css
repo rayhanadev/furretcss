@@ -1,0 +1,42 @@
+code {
+	font-family: monospace;
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+
+	overflow-x: auto;
+
+	padding: 0.25rem;
+
+	color: var(--color-main);
+	border-radius: 0.5rem;
+	background: var(--background-darker);
+}
+
+kbd {
+	font-family: monospace;
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+
+	padding: 0.25rem;
+
+	cursor: help;
+	text-transform: uppercase;
+
+	color: var(--color-strong);
+	border-radius: 0.5rem;
+	background: var(--background-dark);
+}
+
+pre {
+	font-family: monospace;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+
+	overflow-x: auto;
+
+	padding: 0.5rem;
+
+	color: var(--color-main);
+	border-radius: 0.5rem;
+	background: var(--background-darker);
+}
