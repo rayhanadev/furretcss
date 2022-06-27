@@ -7,5 +7,5 @@ websites. Visit the [website](https://css.furret.codes/) to try it out and get s
 Or more simply, paste the following into the `<head>` of your HTML:
 
 ```html
-<link rel="stylesheet" href="https://css.furret.codes/library.min.css" />
+<link rel="stylesheet" href="https://css.furret.codes/css/library.min.css" />
 ```
