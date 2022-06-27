@@ -14,7 +14,7 @@
 		"lint:js": "eslint src/**/*.js --config ./eslint.config.json",
 		"lint:css": "stylelint src/**/*.css --config ./stylelint.config.json",
 		"format": "prettier --check . --config ./prettier.config.json",
-		"format:fix": "prettier --write . --config ./prettier.config.json"
+		"format:fix": "csscomb --config ./csscomb.config.json . && prettier --write . --config ./prettier.config.json"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.17.10",
@@ -22,6 +22,7 @@
 		"@babel/preset-env": "^7.18.2",
 		"autoprefixer": "^10.4.7",
 		"chalk": "4.1.2",
+		"csscomb": "^4.3.0",
 		"cssnano": "^5.1.12",
 		"eslint": "^8.18.0",
 		"eslint-config-prettier": "^8.5.0",

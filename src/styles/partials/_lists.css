@@ -5,16 +5,12 @@ ul {
 
 ul > li {
 	position: relative;
-
 	padding: 0 0 0 20px;
-
 	list-style: none;
-
 	font-family: var(--font-body);
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.8em;
-
 	color: var(--color-main);
 }
 
@@ -22,13 +18,10 @@ ul > li:before {
 	position: absolute;
 	top: 14px;
 	left: 0;
-
 	width: 5px;
 	height: 5px;
-
-	content: "";
+	content: '';
 	transform: rotate(45deg);
-
 	border: 1px solid var(--accent-main);
 	border-width: 2px 2px 0 0;
 }
@@ -42,46 +35,35 @@ ul > li:before {
 ol {
 	margin: 5px 0 15px;
 	padding: 0;
-
 	counter-reset: item;
 }
 
 ol > li {
 	position: relative;
-
 	padding: 0 0 0 20px;
-
 	list-style: none;
-
 	counter-increment: item;
-
 	font-family: var(--font-body);
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.8em;
-
 	color: var(--color-main);
 }
 
 ol > li:before {
 	font-family: var(--font-body);
 	font-size: 1.6rem;
-
 	position: absolute;
-	top: 14px;
+	top: 0;
 	left: -4px;
-
 	width: 5px;
 	height: 5px;
-
-	content: counter(item) ")";
-
+	content: counter(item) ')';
 	color: var(--accent-main);
 }
 
 @media (max-width: 375px) {
 	ol > li:before {
-		top: 10px;
 		left: 0;
 	}
 }

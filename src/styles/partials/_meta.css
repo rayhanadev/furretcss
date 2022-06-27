@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
@@ -12,10 +14,8 @@ body {
 	font-family: var(--font-display);
 	font-size: 78.125%;
 	line-height: 78.125%;
-
 	margin: 0;
 	padding: 0;
-
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -55,7 +55,7 @@ body {
 	}
 
 	.container {
-		max-width: 300px;
+		width: 350px;
 		margin: 2rem auto 0 auto;
 		padding: 10px 20px;
 	}

@@ -1,5 +1,5 @@
 :root {
-	--color-strong: #000;
+	--color-strong: #000000;
 	--color-main: #434242;
 	--color-dim: #737373;
 	--accent-strong: #0676a2;
@@ -9,5 +9,5 @@
 	--selection-color: rgba(125, 218, 255, 0.2);
 	--background-dark: #e3e3e3;
 	--background-darker: #f3f3f3;
-	--background-darkest: #fff;
+	--background-darkest: #ffffff;
 }

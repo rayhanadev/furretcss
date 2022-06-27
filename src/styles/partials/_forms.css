@@ -1,11 +1,9 @@
 form {
 	display: flex;
-
 	width: 100%;
 	min-height: 50px;
 	margin: 25px auto 50px auto;
 	padding: 10px 0;
-
 	align-content: flex-start;
 	justify-content: flex-start;
 	flex-wrap: wrap;
@@ -16,14 +14,10 @@ form header {
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 3em;
-
 	z-index: 20;
-
 	display: table;
-
 	margin-left: 10px;
 	padding: 0 5px;
-
 	color: var(--color-main);
 	background: linear-gradient(
 		120deg,
@@ -41,10 +35,8 @@ form p {
 
 form fieldset {
 	display: flex;
-
 	border: none;
 	margin-bottom: 20px;
-
 	flex-basis: 100%;
 	align-content: center;
 	justify-content: flex-start;
@@ -56,14 +48,10 @@ form fieldset legend {
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2.4rem;
-
 	z-index: 20;
-
 	display: table;
-
 	margin-left: 10px;
 	padding: 0 5px;
-
 	color: var(--color-main);
 }
 
@@ -72,14 +60,10 @@ form label {
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2.2em;
-
 	z-index: 20;
-
 	display: inline-block;
-
 	margin-left: 10px;
 	padding: 0 5px;
-
 	color: var(--color-strong);
 }
 
@@ -88,16 +72,12 @@ form label + input {
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 2.5em;
-
 	z-index: 10;
-
 	display: block;
-
 	width: 100%;
 	margin-top: -25px;
 	margin-bottom: 20px;
 	padding: 0.5rem 1rem;
-
 	color: var(--color-main);
 	border: none;
 	border-radius: 0.5rem;
@@ -110,22 +90,17 @@ form label + textarea {
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 2.5em;
-
 	z-index: 10;
-
 	display: block;
-
 	width: 100%;
 	margin-top: -25px;
 	margin-bottom: 20px;
 	padding: 0.5rem 1rem;
-
 	color: var(--color-main);
 	border: none;
 	border-radius: 0.5rem;
 	outline: none;
 	background: var(--background-darker);
-
 	flex-basis: 100%;
 }
 
@@ -141,137 +116,109 @@ input:focus {
 
 form input:disabled {
 	cursor: not-allowed;
-
 	background-color: var(--background-dark);
 }
 
-form input[type="submit"] {
-	font-family: var(--font-body);
+form input[type='submit'] {
 	font-family: var(--font-display);
 	font-size: 1.6rem;
-	font-weight: 400;
 	font-weight: 700;
 	line-height: 2.5em;
-
 	z-index: 10;
-
 	display: block;
-
 	margin: 5px;
 	margin-bottom: 19px;
 	padding: 0.5rem 1rem;
-
 	cursor: pointer;
-
 	color: var(--color-main);
 	border: none;
 	border-radius: 0.5rem;
 	outline: none;
 	background: var(--background-darker);
-
 	flex-grow: 1;
 }
 
-form input[type="submit"]:hover,
-input[type="submit"]:focus {
+form input[type='submit']:hover,
+input[type='submit']:focus {
 	background-color: var(--background-dark);
 }
 
-form input[type="reset"] {
-	font-family: var(--font-body);
+form input[type='reset'] {
 	font-family: var(--font-display);
 	font-size: 1.6rem;
-	font-weight: 400;
 	font-weight: 700;
 	line-height: 2.5em;
-
 	z-index: 10;
-
 	display: block;
-
 	margin: 5px;
 	margin-bottom: 19px;
 	padding: 0.5rem 1rem;
-
 	cursor: pointer;
-
 	color: var(--color-main);
 	border: none;
 	border-radius: 0.5rem;
 	outline: none;
 	background: var(--background-darker);
-
 	flex-grow: 1;
 }
 
-form input[type="reset"]:hover,
-input[type="reset"]:focus {
+form input[type='reset']:hover,
+input[type='reset']:focus {
 	background-color: var(--background-dark);
 }
 
-form input[type="checkbox"],
-input[type="radio"] {
+form input[type='checkbox'],
+input[type='radio'] {
 	font: inherit;
-
 	display: grid;
-
 	width: 20px;
 	height: 20px;
 	margin: 0;
-
 	transform: translateY(6.5px);
-
 	color: var(--background-darkest);
 	border: 2px solid var(--color-main);
 	border-radius: 50%;
 	background: var(--background-darkest);
-
 	appearance: none;
 	place-content: center;
 }
 
-form input[type="checkbox"]:before,
-input[type="radio"]:before {
+form input[type='checkbox']:before,
+input[type='radio']:before {
 	width: 12px;
 	height: 12px;
-
-	content: "";
+	content: '';
 	transition: 120ms transform ease-in-out;
 	transform: scale(0);
-
 	border-radius: 50%;
 	box-shadow: inset 10px 10px var(--accent-main);
 }
 
-form input[type="checkbox"]:checked:before,
-input[type="radio"]:checked:before {
+form input[type='checkbox']:checked:before,
+input[type='radio']:checked:before {
 	transform: scale(1);
 }
 
-form input[type="checkbox"]:disabled,
-input[type="radio"]:disabled {
+form input[type='checkbox']:disabled,
+input[type='radio']:disabled {
 	border-color: var(--color-dim);
 }
 
-form input[type="checkbox"] + label,
-input[type="radio"] + label {
+form input[type='checkbox'] + label,
+input[type='radio'] + label {
 	font-family: var(--font-display);
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.6em;
-
 	z-index: 20;
-
 	display: inline-block;
-
 	margin: 0;
 	padding: 0 5px;
-
 	color: var(--color-strong);
 }
 
-form input[type="checkbox"]:disabled + label,
-input[type="radio"]:disabled + label {
+form input[type='checkbox']:disabled + label,
+input[type='radio']:disabled + label {
 	color: var(--color-dim);
 	cursor: not-allowed;
 }
@@ -289,17 +236,45 @@ input[type="radio"]:disabled + label {
 		margin-top: -16px;
 	}
 
-	form input[type="checkbox"],
-	input[type="radio"] {
+	form input[type='checkbox'],
+	input[type='radio'] {
 		width: 15px;
 		height: 15px;
-
 		transform: translateY(3px);
 	}
 
-	form input[type="checkbox"]:before,
-	input[type="radio"]:before {
+	form input[type='checkbox']:before,
+	input[type='radio']:before {
 		width: 10px;
 		height: 10px;
 	}
+}
+
+button {
+	font-family: var(--font-display);
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 2.5em;
+	min-width: 125px;
+	z-index: 10;
+	display: block;
+	margin: 5px;
+	margin-bottom: 19px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	color: var(--color-main);
+	border: none;
+	border-radius: 0.5rem;
+	outline: none;
+	background: var(--background-darker);
+}
+
+button:hover,
+button:focus {
+	background-color: var(--background-dark);
+}
+
+button:disabled {
+	cursor: not-allowed;
+	background-color: var(--background-dark);
 }
