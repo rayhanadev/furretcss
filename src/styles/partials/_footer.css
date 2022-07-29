@@ -19,7 +19,7 @@ footer a:before {
 }
 
 footer a:after {
-	bottom: -3px;
+	bottom: 0;
 	border: 5.5px solid transparent;
 }
 

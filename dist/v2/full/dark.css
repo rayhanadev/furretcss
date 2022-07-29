@@ -1412,7 +1412,7 @@ footer a:before {
 	transform-origin: 0 15px;
 }
 footer a:after {
-	bottom: -3px;
+	bottom: 0;
 	border: 5.5px solid transparent;
 }
 @media (prefers-reduced-motion: no-preference) {
