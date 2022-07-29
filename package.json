@@ -9,6 +9,7 @@
 	"scripts": {
 		"dev": "yarn gulp --gulpfile .config/gulpfile.js --cwd . watch",
 		"build": "yarn gulp --gulpfile .config/gulpfile.js --cwd . build",
+		"prod": "node .config/server.js",
 		"lint": "yarn lint:js && yarn lint:css",
 		"lint:fix": "yarn lint:js --fix && yarn lint:css --fix",
 		"lint:js": "eslint src/**/*.js --config ./eslint.config.json",

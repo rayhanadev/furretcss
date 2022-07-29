@@ -1,5 +1,5 @@
 entrypoint = "src/styles/core.css"
-run = "yarn dev"
+run = "yarn prod"
 
 hidden = [".config"]
 

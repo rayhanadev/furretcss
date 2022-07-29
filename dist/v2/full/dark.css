@@ -158,12 +158,6 @@ nav ul > li:before {
 		flex-direction: row;
 		width: auto;
 	}
-
-	nav a:hover:before,
-	nav a:active:before,
-	nav a:focus-visible:before {
-		transform-origin: 0 22.5px;
-	}
 }
 /* Headings */
 h1 {
