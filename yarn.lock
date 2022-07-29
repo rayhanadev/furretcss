@@ -4732,6 +4732,13 @@ postcss-css-variables@^0.18.0:
     escape-string-regexp "^1.0.3"
     extend "^3.0.1"
 
+postcss-custom-media@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-8.0.2.tgz#c8f9637edf45fef761b014c024cee013f80529ea"
+  integrity sha512-7yi25vDAoHAkbhAzX9dHx2yc6ntS4jQvejrNcC+csQJAXjj15e7VcWfMgLqBNAbOvqi5uIa9huOVwdHbf+sKqg==
+  dependencies:
+    postcss-value-parser "^4.2.0"
+
 postcss-discard-comments@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/postcss-discard-comments/-/postcss-discard-comments-5.1.2.tgz#8df5e81d2925af2780075840c1526f0660e53696"

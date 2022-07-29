@@ -6,7 +6,9 @@
 
 html {
 	box-sizing: border-box;
-	background-color: var(--background-darkest);
+	background-color: var(--background-3);
+	transition: all 0.44s ease;
+	overflow-x: hidden;
 }
 
 html,
@@ -17,29 +19,31 @@ body {
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
 	background-color: var(--selection-color);
 }
+
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 7.5px;
 	height: 5px;
 }
 
 ::-webkit-scrollbar-track {
 	border-radius: 0.5rem;
-	background: var(--background-dark);
+	background: var(--background-1);
 }
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 0.5rem;
-	background: var(--color-dim);
+	background: var(--primary-3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
 	border-radius: 0.5rem;
-	background: var(--color-main);
+	background: var(--primary-2);
 }
 
 .container {
@@ -48,7 +52,7 @@ body {
 	padding: 20px;
 }
 
-@media (max-width: 375px) {
+@media (--breakpoint-mobile) {
 	html,
 	body {
 		font-size: 50%;

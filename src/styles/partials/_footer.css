@@ -1,13 +1,13 @@
 footer {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	line-height: initial;
 	margin-top: 50px;
 	padding-top: 8px;
 	text-align: center;
-	letter-spacing: 1px;
+	letter-spacing: 1.2px;
 	text-transform: uppercase;
-	color: var(--color-main);
-	border-top: 2px solid var(--accent-main);
+	color: var(--primary-2);
+	border-top: 2px solid var(--accent-2);
 }
 
 footer a {
@@ -27,7 +27,7 @@ footer a:after {
 	footer a:hover:before {
 		transition: 100ms ease-out;
 		transform: scaleY(0.25);
-		background: var(--accent-main);
+		background: var(--accent-2);
 	}
 
 	footer a:after {
@@ -35,13 +35,9 @@ footer a:after {
 		transition: transform 50ms ease-out 100ms;
 		transform: none;
 	}
-
-	footer a:hover:after {
-		border-left-color: var(--accent-main);
-	}
 }
 
-@media (max-width: 375px) {
+@media (--breakpoint-mobile) {
 	footer a:before {
 		transform-origin: 0 9px;
 	}

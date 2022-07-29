@@ -2,3 +2,35 @@ flex-break {
 	width: 0;
 	flex-basis: 100%;
 }
+
+hr {
+	border: 2px solid var(--background-2);
+}
+
+.theme-toggle-btn {
+	background: none;
+	border: none;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 125px;
+	margin-left: -215px;
+	font-size: 3.6rem;
+}
+
+.theme-toggle-btn:hover {
+	width: auto;
+}
+
+@media (--breakpoint-mobile-outer) {
+	.theme-toggle-btn {
+		font-size: 2.4rem;
+		top: initial;
+		margin: 0;
+		margin-bottom: 10px;
+		position: relative;
+		float: right;
+	}
+}

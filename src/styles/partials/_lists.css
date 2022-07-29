@@ -11,7 +11,7 @@ ul > li {
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.8em;
-	color: var(--color-main);
+	color: var(--primary-2);
 }
 
 ul > li:before {
@@ -22,11 +22,11 @@ ul > li:before {
 	height: 5px;
 	content: '';
 	transform: rotate(45deg);
-	border: 1px solid var(--accent-main);
+	border: 1px solid var(--accent-2);
 	border-width: 2px 2px 0 0;
 }
 
-@media (max-width: 375px) {
+@media (--breakpoint-mobile) {
 	ul > li:before {
 		top: 8px;
 	}
@@ -47,7 +47,7 @@ ol > li {
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.8em;
-	color: var(--color-main);
+	color: var(--primary-2);
 }
 
 ol > li:before {
@@ -59,11 +59,125 @@ ol > li:before {
 	width: 5px;
 	height: 5px;
 	content: counter(item) ')';
-	color: var(--accent-main);
+	color: var(--accent-2);
 }
 
-@media (max-width: 375px) {
+dl {
+	margin: 5px 0 15px;
+	padding: 0;
+}
+
+dl > dt {
+	position: relative;
+	font-family: var(--font-body);
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.8em;
+	color: var(--primary-2);
+}
+
+dl > dd {
+	position: relative;
+	font-family: var(--font-body);
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.8em;
+	color: var(--primary-2);
+	margin-top: -20px;
+	margin-inline-start: 30px;
+}
+
+@media (--breakpoint-mobile) {
 	ol > li:before {
 		left: 0;
+	}
+
+	dl > dd {
+		margin-top: -15px;
+		margin-inline-start: 20px;
+	}
+}
+
+address {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-style: normal;
+	margin: -5px 0 -5px 0;
+}
+
+address a {
+	font-size: 1.6rem;
+	line-height: 2rem;
+	margin: 5px 0 5px 0;
+}
+
+address a:before,
+address a:hover:before,
+address a:active:before,
+address a:focus-visible:before {
+	border: none;
+	background: none;
+	transform: none;
+}
+
+address a:hover:before,
+address a:active:before,
+address a:focus-visible:before {
+	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+address a:after {
+	border: none;
+}
+
+address a[href^='mailto\:']:before {
+	content: '📧 ';
+	display: inline-block;
+	position: relative;
+	transform-origin: center;
+	width: 25px;
+	margin-right: 5px;
+}
+
+address a[href^='tel\:']:before {
+	content: '📞 ';
+	display: inline-block;
+	position: relative;
+	transform-origin: center;
+	width: 25px;
+	margin-right: 5px;
+}
+
+address a[href^='sms\:']:before {
+	content: '💬 ';
+	display: inline-block;
+	position: relative;
+	transform-origin: center;
+	width: 25px;
+	margin-right: 5px;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateY(-9px);
+	}
+	35% {
+		transform: translateY(-9px) rotate(17deg);
+	}
+	55% {
+		transform: translateY(-9px) rotate(-17deg);
+	}
+	65% {
+		transform: translateY(-9px) rotate(17deg);
+	}
+	75% {
+		transform: translateY(-9px) rotate(-17deg);
+	}
+	100% {
+		transform: translateY(0) rotate(0);
 	}
 }

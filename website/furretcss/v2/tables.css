@@ -1,0 +1,110 @@
+table {
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid var(--background-2);
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: block;
+	overflow-x: auto;
+	margin: 20px 0 20px 0;
+}
+
+table thead {
+	display: table-header-group;
+	width: 100%;
+}
+
+table thead tr {
+	border: 1px solid var(--accent-2);
+	width: auto;
+	min-width: 100%;
+}
+
+table thead tr th {
+	border: 1px solid var(--accent-2);
+	background-color: var(--accent-2);
+	color: var(--primary-2);
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	height: 2.8rem;
+	padding: 10px;
+	overflow-x: auto;
+	min-width: 220px;
+}
+
+table tbody {
+	display: table-row-group;
+	width: 100%;
+}
+
+table tbody tr {
+	border: 1px solid var(--background-2);
+	width: auto;
+	min-width: 100%;
+}
+
+table tbody tr td {
+	border: 1px solid var(--background-2);
+	color: var(--primary-2);
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	height: 2.8rem;
+	padding: 10px;
+	overflow-x: auto;
+	min-width: 220px;
+}
+
+table tbody tr th {
+	border: 1px solid var(--background-2);
+	color: var(--primary-2);
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 2.2rem;
+	height: 2.8rem;
+	padding: 10px;
+	overflow-x: auto;
+	min-width: 220px;
+}
+
+table tfoot {
+	display: table-footer-group;
+	width: 100%;
+}
+
+table tfoot tr {
+	border: 1px solid var(--background-2);
+	width: auto;
+	min-width: 100%;
+}
+
+table tfoot tr td {
+	border: 1px solid var(--background-2);
+	color: var(--primary-3);
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	height: 2.8rem;
+	padding: 10px;
+	overflow-x: auto;
+	min-width: 220px;
+}
+
+table tfoot tr th {
+	border: 1px solid var(--background-2);
+	color: var(--primary-3);
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 2.2rem;
+	height: 2.8rem;
+	padding: 10px;
+	overflow-x: auto;
+	min-width: 220px;
+}
+
+table caption {
+	caption-side: bottom;
+	color: var(--primary-2);
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	height: 2.8rem;
+	text-align: center;
+}

@@ -1,0 +1,90 @@
+nav {
+	margin-top: 30px;
+	width: 250px;
+	position: fixed;
+	margin-left: -275px;
+	top: 200px;
+}
+
+nav header {
+	content: 'Navigation:';
+	flex-basis: 100%;
+	color: var(--primary-1);
+	margin: 10px 0 10px 0;
+	padding: 0 4px;
+	font: var(--font-display);
+	font-size: 3.6rem;
+	font-weight: 700;
+	line-height: 4rem;
+}
+
+nav a {
+	color: var(--primary-1);
+	cursor: pointer;
+	display: inline-block;
+	margin: 10px 10px 0 10px;
+	padding: 0 4px;
+	position: relative;
+	text-decoration: none;
+	font-size: 2.2rem;
+	line-height: 4rem;
+	font-family: var(--font-body);
+}
+
+nav a:hover:before,
+nav a:active:before,
+nav a:focus-visible:before {
+	transform-origin: 0 40px;
+}
+
+nav a:hover:after,
+nav a:active:after,
+nav a:focus-visible:after {
+	bottom: 5px;
+}
+
+nav ul {
+	display: flex;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 250px;
+}
+
+nav ul {
+	display: flex;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+nav ul > li {
+	list-style: none;
+	padding: 0;
+}
+
+nav ul > li:before {
+	content: none;
+}
+
+@media (--breakpoint-mobile-outer) {
+	nav {
+		width: 100%;
+		position: relative;
+		margin: 0;
+		margin-top: 30px;
+		top: initial;
+	}
+
+	nav ul {
+		flex-direction: row;
+		width: auto;
+	}
+
+	nav a:hover:before,
+	nav a:active:before,
+	nav a:focus-visible:before {
+		transform-origin: 0 22.5px;
+	}
+}

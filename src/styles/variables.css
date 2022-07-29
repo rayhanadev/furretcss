@@ -1,7 +1,14 @@
-:root {
-	--font-display: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
+:root,
+::before,
+::after {
+	--font-display: 'Outfit', -apple-system, blinkmacsystemfont, 'Segoe UI',
+		roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	--font-body: 'Outfit', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
 		helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 		'Segoe UI Symbol';
-	--font-body: georgia, 'Times New Roman', times, serif;
-	--font-monospace: monospace;
+	--font-monospace: 'DM Mono', monospace;
 }
+
+@custom-media --breakpoint-mobile (max-width: 500px);
+@custom-media --breakpoint-mobile-outer (max-width: 1300px);

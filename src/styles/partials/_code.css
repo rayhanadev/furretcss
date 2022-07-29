@@ -1,16 +1,22 @@
-code {
-	font-family: monospace;
+code,
+samp {
+	font-family: var(--font-monospace);
 	font-size: 1.6rem;
-	line-height: 1.6rem;
+	line-height: 2.2rem;
 	overflow-x: auto;
 	padding: 0.25rem;
-	color: var(--color-main);
+	color: var(--primary-2);
 	border-radius: 0.5rem;
-	background: var(--background-darker);
+	background: var(--background-2);
+}
+
+samp:before {
+	content: '~$ ';
+	color: var(--primary-3);
 }
 
 kbd {
-	font-family: monospace;
+	font-family: var(--font-monospace);
 	font-size: 1.6rem;
 	line-height: 1.6rem;
 	padding: 0.25rem;
@@ -18,16 +24,22 @@ kbd {
 	text-transform: uppercase;
 	color: var(--color-strong);
 	border-radius: 0.5rem;
-	background: var(--background-dark);
+	background: var(--background-1);
 }
 
 pre {
-	font-family: monospace;
+	font-family: var(--font-monospace);
 	font-size: 1.6rem;
 	line-height: 2.2rem;
 	overflow-x: auto;
 	padding: 0.5rem;
-	color: var(--color-main);
+	color: var(--primary-2);
 	border-radius: 0.5rem;
-	background: var(--background-darker);
+	background: var(--background-2);
+}
+
+var {
+	font-family: var(--font-monospace);
+	font-style: italic;
+	color: var(--primary-2);
 }

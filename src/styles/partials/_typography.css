@@ -5,10 +5,11 @@ h1 {
 	line-height: 6rem;
 	display: table;
 	margin: 0;
-	margin-bottom: 5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
 	padding: 10px 20px 0 13.25px;
 	letter-spacing: -1px;
-	color: var(--color-strong);
+	color: var(--primary-1);
 	background: linear-gradient(
 		120deg,
 		var(--highlight-color) 0%,
@@ -24,10 +25,11 @@ h2 {
 	line-height: 5rem;
 	display: table;
 	margin: 0;
-	margin-bottom: 5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
 	padding: 8.75px 17.5px 0 13.25px;
 	letter-spacing: -1px;
-	color: var(--color-strong);
+	color: var(--primary-1);
 	background: linear-gradient(
 		120deg,
 		var(--highlight-color) 0%,
@@ -43,10 +45,11 @@ h3 {
 	line-height: 4rem;
 	display: table;
 	margin: 0;
-	margin-bottom: 5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
 	padding: 7.5px 15px 0 13.25px;
 	letter-spacing: -1px;
-	color: var(--color-strong);
+	color: var(--primary-1);
 	background: linear-gradient(
 		120deg,
 		var(--highlight-color) 0%,
@@ -62,10 +65,11 @@ h4 {
 	line-height: 3rem;
 	display: table;
 	margin: 0;
-	margin-bottom: 5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
 	padding: 9px 13.25px 0 13.25px;
 	letter-spacing: -1px;
-	color: var(--color-strong);
+	color: var(--primary-1);
 	background: linear-gradient(
 		120deg,
 		var(--highlight-color) 0%,
@@ -81,10 +85,11 @@ h5 {
 	line-height: 2.5rem;
 	display: table;
 	margin: 0;
-	margin-bottom: 5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
 	padding: 9px 13.25px 0 13.25px;
 	letter-spacing: -1px;
-	color: var(--color-strong);
+	color: var(--primary-1);
 }
 
 h6 {
@@ -92,10 +97,11 @@ h6 {
 	line-height: 2rem;
 	display: table;
 	margin: 0;
-	margin-bottom: 5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
 	padding: 9px 13.25px 0 13.25px;
 	letter-spacing: -1px;
-	color: var(--color-strong);
+	color: var(--primary-1);
 }
 
 /* Paragraph Text */
@@ -104,33 +110,124 @@ p {
 	font-family: var(--font-body);
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 1.8em;
-	color: var(--color-main);
+	line-height: 2.88rem;
+	color: var(--primary-2);
 }
 
 strong {
-	font-family: var(--font-body);
-	font-size: 1.6rem;
 	font-weight: 700;
-	line-height: 1.8em;
-	color: var(--accent-strong);
+	color: var(--accent-2);
 }
 
 b {
-	font-family: var(--font-body);
-	font-size: 1.6rem;
 	font-weight: 700;
-	line-height: 1.8em;
-	color: var(--color-main);
 }
 
 em {
-	font-family: var(--font-body);
-	font-size: 1.6rem;
 	font-weight: 300;
 	font-style: italic;
-	line-height: 1.8em;
-	color: var(--color-main);
+	color: var(--accent-1);
+}
+
+i {
+	font-weight: 300;
+	font-style: italic;
+}
+
+u {
+	text-decoration-color: var(--accent-3);
+}
+
+s {
+	color: var(--primary-3);
+}
+
+s:before,
+s:after {
+	clip-path: inset(100%);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+s:before {
+	content: ' [start of stricken text] ';
+}
+
+s:after {
+	content: ' [end of stricken text] ';
+}
+
+del {
+	color: var(--primary-3);
+}
+
+del:before,
+del:after {
+	clip-path: inset(100%);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+del:before {
+	content: ' [deletion start] ';
+}
+
+del:after {
+	content: ' [deletion end] ';
+}
+
+ins {
+	text-decoration-style: wavy;
+	text-decoration-color: var(--accent-3);
+}
+
+ins:before,
+ins:after {
+	clip-path: inset(100%);
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+ins:before {
+	content: ' [insertion start] ';
+}
+
+ins:after {
+	content: ' [insertion end] ';
+}
+
+mark {
+	color: var(--primary-1);
+	background: var(--marked-color);
+	padding: 2px;
+}
+
+small {
+	color: var(--primary-3);
+	line-height: 1.6rem;
+}
+
+abbr {
+	cursor: help;
+	text-decoration: underline;
+	text-decoration-color: var(--accent-3) !important;
+	text-decoration-style: dotted !important;
+}
+
+dfn {
+	cursor: help;
 }
 
 a {
@@ -140,7 +237,7 @@ a {
 	padding: 0 4px;
 	cursor: pointer;
 	text-decoration: none;
-	color: var(--color-strong);
+	color: var(--primary-1);
 }
 
 a:before,
@@ -171,14 +268,19 @@ a:after {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	a:hover {
-		color: var(--color-main);
+	a:hover,
+	a:active,
+	a:focus-visible {
+		outline: none;
+		color: var(--primary-2);
 	}
 
-	a:hover:before {
+	a:hover:before,
+	a:active:before,
+	a:focus-visible:before {
 		transition: 100ms ease-out;
 		transform: scaleY(0.15);
-		background: var(--accent-main);
+		background: var(--accent-2);
 	}
 
 	a:after {
@@ -187,8 +289,10 @@ a:after {
 		transform: none;
 	}
 
-	a:hover:after {
-		border-left-color: var(--accent-main);
+	a:hover:after,
+	a:active:after,
+	a:focus-visible:after {
+		border-left-color: var(--accent-2);
 	}
 }
 
@@ -204,29 +308,93 @@ a:after {
 	}
 }
 
+sup a {
+	color: var(--primary-2);
+}
+
+sup a:hover,
+sup a:active,
+sup a:focus-visible {
+	color: var(--primary-1);
+	cursor: pointer;
+}
+
+sup a:before {
+	background: none;
+	border: none;
+}
+
+sup a:hover:before {
+	background: none;
+	border: none;
+}
+
+sup a:after {
+	background: none;
+	border: none;
+}
+
+sup a:hover:after {
+	background: none;
+	border: none;
+}
+
 blockquote {
 	font-family: var(--font-body);
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.8em;
 	margin: 0;
-	padding: 1.25px 0 1.25px 0;
-	color: var(--color-main);
-	border-left: 8px solid var(--accent-main);
-}
-
-blockquote p {
-	margin-left: 10px;
+	padding: 1.25px 0 1.25px 10px;
+	color: var(--primary-2);
+	border-left: 8px solid var(--accent-2);
 }
 
 blockquote footer {
 	font-size: 1.4rem;
 	font-style: none;
 	line-height: 1.4rem;
-	margin: 20px 0 20px 10px;
+	margin: 20px 0 20px 0;
 	text-align: left;
 	letter-spacing: 0;
 	text-transform: none;
-	color: var(--color-dim);
+	color: var(--primary-3);
 	border: none;
+}
+
+aside {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	left: 110%;
+	position: relative;
+	width: 60%;
+	top: 15px;
+}
+
+@media (--breakpoint-mobile-outer) {
+	aside {
+		top: 0;
+		left: 0;
+		height: auto;
+		width: 100%;
+		padding: 1.25px 0 1.25px 75px;
+		text-align: right;
+	}
+}
+
+section {
+	background-color: var(--background-2);
+	color: var(--primary-2);
+	padding: 10px;
+	margin: 20px 0 20px 0;
+	border-radius: 5px;
+}
+
+section header {
+	font-size: 2.6rem;
+	line-height: 2.8rem;
+	margin-top: 1rem;
+	font-weight: 700;
+	color: var(--accent-2);
 }
