@@ -1,6 +1,35 @@
 window.furrets = window.furrets || {};
 window.USER_OVERRIDE = window.USER_OVERRIDE || {};
 
+const noop = () => {};
+
+var storage = (function () {
+	var uid = new Date();
+	var storage;
+	var result;
+	try {
+		(storage = window.localStorage).setItem(uid, uid);
+		result = storage.getItem(uid) == uid;
+		storage.removeItem(uid);
+		return result && storage;
+	} catch (exception) {
+		noop();
+	}
+	storage = function () {
+		console.log('localStorage Disabled.');
+		return;
+	};
+	storage.getItem = function () {
+		console.log('localStorage Disabled.');
+		return;
+	};
+	storage.setItem = function () {
+		console.log('localStorage Disabled.');
+		return;
+	};
+	return storage;
+})();
+
 const acceptedHostnames = window.USER_OVERRIDE.acceptedHostnames
 	? window.USER_OVERRIDE.acceptedHostnames
 	: [
@@ -60,15 +89,15 @@ const loadColorScheme = function (scheme) {
  * and sets localStorage keys. Does not activate theme, use
  * furrets.addThemeToggle() to do that.
  */
-if (localStorage.getItem('furretcss-interacted') !== 'true') {
+if (storage.getItem('furretcss-interacted') !== 'true') {
 	if (
 		window.matchMedia &&
 		window.matchMedia('(prefers-color-scheme: dark)').matches
 	) {
-		localStorage.setItem('furretcss-theme', 'dark');
-		localStorage.setItem('furretcss-interacted', 'true');
+		storage.setItem('furretcss-theme', 'dark');
+		storage.setItem('furretcss-interacted', 'true');
 	} else {
-		localStorage.setItem('furretcss-theme', 'none');
+		storage.setItem('furretcss-theme', 'none');
 	}
 }
 
@@ -77,10 +106,10 @@ if (localStorage.getItem('furretcss-interacted') !== 'true') {
  */
 window.furrets.themeToggle = function (toggleBtn) {
 	const themeToSet =
-		localStorage.getItem('furretcss-theme') === 'dark' ? 'light' : 'dark';
+		storage.getItem('furretcss-theme') === 'dark' ? 'light' : 'dark';
 
 	loadColorScheme(themeToSet);
-	localStorage.setItem('furretcss-theme', themeToSet);
+	storage.setItem('furretcss-theme', themeToSet);
 	if (toggleBtn) toggleBtn.innerText = themeToSet === 'light' ? '☀️' : '🌙';
 
 	return themeToSet;
@@ -91,7 +120,7 @@ window.furrets.themeToggle = function (toggleBtn) {
  * the website.
  */
 window.furrets.addThemeToggle = function () {
-	const storedTheme = localStorage.getItem('furretcss-theme');
+	const storedTheme = storage.getItem('furretcss-theme');
 	const themeToggle = document.createElement('button');
 	themeToggle.innerText = storedTheme === 'light' ? '☀️' : '🌙';
 	themeToggle.className = 'theme-toggle-btn';
