@@ -240,6 +240,37 @@ a {
 	color: var(--primary-1);
 }
 
+sup a {
+	color: var(--primary-2);
+}
+
+sup a:hover,
+sup a:active,
+sup a:focus-visible {
+	color: var(--primary-1);
+	cursor: pointer;
+}
+
+sup a:before {
+	background: none;
+	border: none;
+}
+
+sup a:hover:before {
+	background: none;
+	border: none;
+}
+
+sup a:after {
+	background: none;
+	border: none;
+}
+
+sup a:hover:after {
+	background: none;
+	border: none;
+}
+
 blockquote {
 	font-family: var(--font-body);
 	font-size: 1.6rem;
