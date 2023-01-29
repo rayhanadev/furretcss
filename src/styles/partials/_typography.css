@@ -5,15 +5,15 @@ h1 {
 	line-height: 6rem;
 	display: table;
 	margin: 0;
-	margin-top: 3.5rem;
+	margin-top: 5rem;
 	margin-bottom: 1.5rem;
 	padding: 10px 20px 0 13.25px;
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -31,9 +31,9 @@ h2 {
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -51,9 +51,9 @@ h3 {
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -71,9 +71,9 @@ h4 {
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -154,11 +154,11 @@ s:after {
 }
 
 s:before {
-	content: ' [start of stricken text] ';
+	content: " [start of stricken text] ";
 }
 
 s:after {
-	content: ' [end of stricken text] ';
+	content: " [end of stricken text] ";
 }
 
 del {
@@ -177,11 +177,11 @@ del:after {
 }
 
 del:before {
-	content: ' [deletion start] ';
+	content: " [deletion start] ";
 }
 
 del:after {
-	content: ' [deletion end] ';
+	content: " [deletion end] ";
 }
 
 ins {
@@ -201,11 +201,11 @@ ins:after {
 }
 
 ins:before {
-	content: ' [insertion start] ';
+	content: " [insertion start] ";
 }
 
 ins:after {
-	content: ' [insertion end] ';
+	content: " [insertion end] ";
 }
 
 mark {
@@ -230,14 +230,25 @@ dfn {
 	cursor: help;
 }
 
-a {
-	position: relative;
-	display: inline-block;
-	margin: 0;
-	padding: 0 4px;
-	cursor: pointer;
-	text-decoration: none;
-	color: var(--primary-1);
+a,
+a:before,
+a:after {
+	background: none;
+	border: none;
+	padding: 0;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: var(--primary-2);
+	transition: text-decoration-color 0.1s ease;
+	color: var(--primary-2);
+}
+
+a:hover,
+a:hover:before,
+a:hover:after {
+	background: none;
+	border: none;
+	text-decoration-color: var(--accent-2);
 }
 
 sup a {
@@ -280,6 +291,10 @@ blockquote {
 	padding: 1.25px 0 1.25px 10px;
 	color: var(--primary-2);
 	border-left: 8px solid var(--accent-2);
+}
+
+blockquote p {
+	margin: 2.5px 0;
 }
 
 blockquote footer {

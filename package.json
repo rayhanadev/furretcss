@@ -1,6 +1,6 @@
 {
 	"name": "furret.css",
-	"version": "2.1.1",
+	"version": "2.2.0",
 	"description": "A lightweight, beautiful stylesheet that allows for high-quality, semantically correct HTML markup.",
 	"main": "./dist/v2/full/light.min.css",
 	"exports": {
@@ -20,7 +20,9 @@
 		"./v2/tables": "./dist/v2/tables.min.css",
 		"./v2/typography": "./dist/v2/typography.min.css"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"author": "Ray Arayilakath <rayhanadev@protonmail.com> (https://www.furret.codes)",
 	"license": "MIT",
 	"scripts": {

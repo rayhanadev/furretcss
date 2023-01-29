@@ -15,7 +15,7 @@ footer a {
 }
 
 footer a:before {
-	transform-origin: 0 15px;
+	transform-origin: 0 11px;
 }
 
 footer a:after {

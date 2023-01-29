@@ -33,7 +33,7 @@ var storage = (function () {
 const acceptedHostnames = window.USER_OVERRIDE.acceptedHostnames
 	? window.USER_OVERRIDE.acceptedHostnames
 	: [
-			'css.furret.codes', // production server
+			'css.furret.dev', // production server
 			'furretcss-lib.rayhanadev.repl.co', // development server
 	  ];
 
@@ -64,11 +64,19 @@ const DOMRegex = function (elem, attr, regex) {
 const loadColorScheme = function (scheme) {
 	if (!['light', 'dark'].includes(scheme)) scheme = 'light';
 
+	const links = [];
+
 	const furretcssPath = new RegExp(
 		'/furretcss/v2/full/(?:light|dark)(?:.min)?.css',
 	);
 
-	const links = DOMRegex('link', 'href', furretcssPath);
+	links.push(...DOMRegex('link', 'href', furretcssPath));
+
+	const furretcssHljsPath = new RegExp(
+		'/highlightjs/(?:light|dark)(?:.min)?.css',
+	);
+
+	links.push(...DOMRegex('link', 'href', furretcssHljsPath));
 
 	for (const link of links) {
 		const url = acceptedHostnames.includes(location.hostname)
@@ -78,8 +86,14 @@ const loadColorScheme = function (scheme) {
 		if (!acceptedHostnames.includes(url.hostname)) continue;
 
 		if (link.rel === 'stylesheet') {
-			const min = link.href.includes('.min') ? '.min' : '';
-			link.href = `${url.protocol}//${url.hostname}/furretcss/v2/full/${scheme}${min}.css`;
+			if (link.href.includes('/furretcss/v2/full')) {
+				const min = link.href.includes('.min') ? '.min' : '';
+				link.href = `${url.protocol}//${url.hostname}/furretcss/v2/full/${scheme}${min}.css`;
+			}
+
+			if (link.href.includes('/highlightjs')) {
+				link.href = `${url.protocol}//${url.hostname}/highlightjs/${scheme}.css`;
+			}
 		}
 	}
 };
@@ -128,7 +142,7 @@ window.furrets.addThemeToggle = function () {
 		window.furrets.themeToggle(themeToggle),
 	);
 
-	const container = document.querySelector('div.container');
+	const container = document.querySelector('body');
 	container.insertAdjacentElement('afterbegin', themeToggle);
 
 	const furretcssPath = new RegExp(

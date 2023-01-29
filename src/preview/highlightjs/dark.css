@@ -1,0 +1,68 @@
+/* Base2Tone-Drawbridge Dark */
+/* by Bram de Haan, adapted from DuoTone themes by Simurai (http://simurai.com/projects/2016/01/01/duotone-themes) */
+/* https://github.com/atelierbram/Base2Tone-highlight.js/ */
+
+/* Base2Tone-Drawbridge Comment */
+
+.hljs-comment,
+.hljs-quote,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-tag,
+.hljs-selector-pseudo,
+.hljs-tag,
+.hljs-symbol,
+.hljs-attr,
+.hljs-property {
+	color: #585a81;
+}
+
+.hljs-string {
+	color: #6395a3;
+}
+
+.hljs-number,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name {
+	color: #4f7c8a;
+}
+
+.hljs-keyword {
+	color: #3c6372;
+}
+
+.hljs-literal {
+	color: #2c4c59;
+}
+
+.hljs-type,
+.hljs-name,
+.hljs-link,
+.hljs-params,
+.hljs-bullet .hljs-title,
+.class_,
+.function_,
+.hljs-section {
+	color: #d9d9d9;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4f7c8a;
+	padding: 0.5em;
+}

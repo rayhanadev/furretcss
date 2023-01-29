@@ -11,7 +11,7 @@ samp {
 }
 
 samp:before {
-	content: '~$ ';
+	content: "~$ ";
 	color: var(--primary-3);
 }
 

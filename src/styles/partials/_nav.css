@@ -1,40 +1,56 @@
 nav {
-	margin-top: 30px;
+	margin-top: -10px;
 	width: 250px;
 	position: fixed;
 	margin-left: -275px;
 	top: 200px;
+	max-height: 400px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+
+nav button {
+	position: fixed;
+	z-index: 20;
+	padding: 20px 20px 5px 20px;
+	margin: -20px;
 }
 
 nav header {
-	content: 'Navigation:';
+	content: "Navigation:";
 	flex-basis: 100%;
-	color: var(--primary-1);
-	margin: 10px 0 10px 0;
-	padding: 0 4px;
+	color: var(--accent-2);
 	font: var(--font-display);
 	font-size: 3.6rem;
 	font-weight: 700;
 	line-height: 4rem;
+	text-align: right;
+	position: fixed;
+	z-index: 10;
+	padding: 20px 20px 5px 20px;
+	margin: 0;
 }
 
 nav a {
-	color: var(--primary-1);
-	cursor: pointer;
-	display: inline-block;
-	margin: 10px 10px 0 10px;
-	padding: 0 4px;
-	position: relative;
-	text-decoration: none;
-	font-size: 2.2rem;
-	line-height: 4rem;
-	font-family: var(--font-body);
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 2px 10px;
+	color: var(--primary-3);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: var(--primary-3);
+	transition: color 0.1s ease;
+	transition: text-decoration-color 0.1s ease;
 }
 
 nav a:hover:before,
 nav a:active:before,
 nav a:focus-visible:before {
-	transform-origin: 0 40px;
+	background: none;
+	border: none;
+	text-decoration-color: var(--accent-2);
 }
 
 nav a:hover:after,
@@ -45,23 +61,18 @@ nav a:focus-visible:after {
 
 nav ul {
 	display: flex;
-	align-content: flex-start;
-	justify-content: flex-start;
+	align-content: flex-end;
+	justify-content: flex-end;
 	flex-wrap: wrap;
 	flex-direction: column;
-	width: 250px;
-}
-
-nav ul {
-	display: flex;
-	align-content: flex-start;
-	justify-content: flex-start;
-	flex-wrap: wrap;
+	width: initial;
+	margin-top: 65px;
 }
 
 nav ul > li {
 	list-style: none;
 	padding: 0;
+	text-align: right;
 }
 
 nav ul > li:before {
@@ -73,12 +84,31 @@ nav ul > li:before {
 		width: 100%;
 		position: relative;
 		margin: 0;
-		margin-top: 30px;
 		top: initial;
 	}
 
 	nav ul {
-		flex-direction: row;
+		flex-direction: column;
 		width: auto;
+		align-content: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin-top: 10px;
+		max-height: 80px;
 	}
+
+	nav header {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: min-content;
+	}
+
+	nav ul > li {
+		text-align: left;
+	}
+}
+
+nav::-webkit-scrollbar {
+	width: 3px;
 }

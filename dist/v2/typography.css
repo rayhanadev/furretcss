@@ -11,7 +11,7 @@ samp {
 }
 
 samp:before {
-	content: '~$ ';
+	content: "~$ ";
 	color: var(--primary-3);
 }
 
@@ -61,7 +61,7 @@ footer a {
 }
 
 footer a:before {
-	transform-origin: 0 15px;
+	transform-origin: 0 11px;
 }
 
 footer a:after {
@@ -120,7 +120,7 @@ ul > li:before {
 	left: 0;
 	width: 5px;
 	height: 5px;
-	content: '';
+	content: "";
 	transform: rotate(45deg);
 	border: 1px solid var(--accent-2);
 	border-width: 2px 2px 0 0;
@@ -129,6 +129,72 @@ ul > li:before {
 @media (--breakpoint-mobile) {
 	ul > li:before {
 		top: 8px;
+	}
+}
+
+ul input ~ li:before {
+	list-style-type: none;
+}
+
+ul input[type="checkbox"] {
+	font: inherit;
+	display: inline-grid;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	margin-right: 10px;
+	color: var(--background-3);
+	border: 2px solid var(--primary-2);
+	background: var(--background-3);
+	appearance: none;
+	place-content: center;
+	cursor: pointer;
+}
+
+ul input[type="checkbox"] {
+	border-radius: 25%;
+}
+
+ul input[type="checkbox"]:before {
+	width: 12px;
+	height: 12px;
+	content: "";
+	transition: 120ms transform ease-in-out;
+	transform: scale(0);
+	box-shadow: inset 10px 10px var(--accent-2);
+	cursor: pointer;
+}
+
+ul input[type="checkbox"]:before {
+	border-radius: 25%;
+	transform-origin: bottom left;
+	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+ul input[type="checkbox"]:checked:before {
+	transform: scale(1);
+}
+
+ul input[type="checkbox"]:disabled {
+	border-color: var(--background-1);
+	background-color: var(--background-3);
+}
+
+ul input[type="checkbox"]:disabled + label {
+	color: var(--primary-3);
+	cursor: not-allowed;
+}
+
+@media (--breakpoint-mobile) {
+	ul input[type="checkbox"] {
+		width: 15px;
+		height: 15px;
+		transform: translateY(3px);
+	}
+
+	ul input[type="checkbox"]:before {
+		width: 10px;
+		height: 10px;
 	}
 }
 
@@ -158,7 +224,7 @@ ol > li:before {
 	left: -4px;
 	width: 5px;
 	height: 5px;
-	content: counter(item) ')';
+	content: counter(item) ")";
 	color: var(--accent-2);
 }
 
@@ -231,31 +297,34 @@ address a:after {
 	border: none;
 }
 
-address a[href^='mailto\:']:before {
-	content: '📧 ';
+address a[href^="mailto\:"]:before {
+	content: "📧 ";
 	display: inline-block;
 	position: relative;
 	transform-origin: center;
 	width: 25px;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
-address a[href^='tel\:']:before {
-	content: '📞 ';
+address a[href^="tel\:"]:before {
+	content: "📞 ";
 	display: inline-block;
 	position: relative;
 	transform-origin: center;
 	width: 25px;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
-address a[href^='sms\:']:before {
-	content: '💬 ';
+address a[href^="sms\:"]:before {
+	content: "💬 ";
 	display: inline-block;
 	position: relative;
 	transform-origin: center;
 	width: 25px;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
 @keyframes shake {
@@ -298,12 +367,24 @@ html {
 html,
 body {
 	font-family: var(--font-display);
-	font-size: 78.125%;
-	line-height: 78.125%;
+	font-size: 70%;
+	line-height: 70%;
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	height: fit-content;
+	margin: 40px auto 0;
+	max-width: 700px;
+	padding: 20px;
+}
+
+p:target {
+	padding-left: 5px;
+	background-color: var(--background-1);
 }
 
 ::selection {
@@ -330,22 +411,10 @@ body {
 	background: var(--primary-2);
 }
 
-.container {
-	max-width: 700px;
-	margin: 40px auto 0 auto;
-	padding: 20px;
-}
-
 @media (--breakpoint-mobile) {
 	html,
 	body {
 		font-size: 50%;
-	}
-
-	.container {
-		width: 350px;
-		margin: 2rem auto 0 auto;
-		padding: 10px 20px;
 	}
 }
 
@@ -361,18 +430,21 @@ hr {
 .theme-toggle-btn {
 	background: none;
 	border: none;
-	width: auto;
-	height: auto;
+	height: 75px;
+	width: 75px;
+	min-width: 75px;
 	margin: 0;
 	padding: 0;
 	position: fixed;
-	top: 125px;
-	margin-left: -215px;
-	font-size: 3.6rem;
+	margin-left: -275px;
+	font-size: 2.4rem;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
 }
 
 .theme-toggle-btn:hover {
-	width: auto;
+	width: 75px;
 }
 
 @media (--breakpoint-mobile-outer) {
@@ -383,46 +455,71 @@ hr {
 		margin-bottom: 10px;
 		position: relative;
 		float: right;
+		width: 48px;
+		height: 48px;
+		min-width: 48px;
+	}
+
+	.theme-toggle-btn:hover {
+		width: 48px;
+		height: 48px;
+		min-width: 48px;
 	}
 }
 
 nav {
-	margin-top: 30px;
+	margin-top: -10px;
 	width: 250px;
 	position: fixed;
 	margin-left: -275px;
 	top: 200px;
+	max-height: 400px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+
+nav button {
+	position: fixed;
+	z-index: 20;
+	padding: 20px 20px 5px 20px;
+	margin: -20px;
 }
 
 nav header {
-	content: 'Navigation:';
+	content: "Navigation:";
 	flex-basis: 100%;
-	color: var(--primary-1);
-	margin: 10px 0 10px 0;
-	padding: 0 4px;
+	color: var(--accent-2);
 	font: var(--font-display);
 	font-size: 3.6rem;
 	font-weight: 700;
 	line-height: 4rem;
+	text-align: right;
+	position: fixed;
+	z-index: 10;
+	padding: 20px 20px 5px 20px;
+	margin: 0;
 }
 
 nav a {
-	color: var(--primary-1);
-	cursor: pointer;
-	display: inline-block;
-	margin: 10px 10px 0 10px;
-	padding: 0 4px;
-	position: relative;
-	text-decoration: none;
-	font-size: 2.2rem;
-	line-height: 4rem;
-	font-family: var(--font-body);
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 2px 10px;
+	color: var(--primary-3);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: var(--primary-3);
+	transition: color 0.1s ease;
+	transition: text-decoration-color 0.1s ease;
 }
 
 nav a:hover:before,
 nav a:active:before,
 nav a:focus-visible:before {
-	transform-origin: 0 40px;
+	background: none;
+	border: none;
+	text-decoration-color: var(--accent-2);
 }
 
 nav a:hover:after,
@@ -433,23 +530,18 @@ nav a:focus-visible:after {
 
 nav ul {
 	display: flex;
-	align-content: flex-start;
-	justify-content: flex-start;
+	align-content: flex-end;
+	justify-content: flex-end;
 	flex-wrap: wrap;
 	flex-direction: column;
-	width: 250px;
-}
-
-nav ul {
-	display: flex;
-	align-content: flex-start;
-	justify-content: flex-start;
-	flex-wrap: wrap;
+	width: initial;
+	margin-top: 65px;
 }
 
 nav ul > li {
 	list-style: none;
 	padding: 0;
+	text-align: right;
 }
 
 nav ul > li:before {
@@ -461,14 +553,33 @@ nav ul > li:before {
 		width: 100%;
 		position: relative;
 		margin: 0;
-		margin-top: 30px;
 		top: initial;
 	}
 
 	nav ul {
-		flex-direction: row;
+		flex-direction: column;
 		width: auto;
+		align-content: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin-top: 10px;
+		max-height: 80px;
 	}
+
+	nav header {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: min-content;
+	}
+
+	nav ul > li {
+		text-align: left;
+	}
+}
+
+nav::-webkit-scrollbar {
+	width: 3px;
 }
 
 /* Headings */
@@ -478,15 +589,15 @@ h1 {
 	line-height: 6rem;
 	display: table;
 	margin: 0;
-	margin-top: 3.5rem;
+	margin-top: 5rem;
 	margin-bottom: 1.5rem;
 	padding: 10px 20px 0 13.25px;
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -504,9 +615,9 @@ h2 {
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -524,9 +635,9 @@ h3 {
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -544,9 +655,9 @@ h4 {
 	letter-spacing: -1px;
 	color: var(--primary-1);
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0%,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0%,
+	var(--highlight-color) 100%
 	);
 	background-repeat: no-repeat;
 	background-position: 0 30%;
@@ -627,11 +738,11 @@ s:after {
 }
 
 s:before {
-	content: ' [start of stricken text] ';
+	content: " [start of stricken text] ";
 }
 
 s:after {
-	content: ' [end of stricken text] ';
+	content: " [end of stricken text] ";
 }
 
 del {
@@ -650,11 +761,11 @@ del:after {
 }
 
 del:before {
-	content: ' [deletion start] ';
+	content: " [deletion start] ";
 }
 
 del:after {
-	content: ' [deletion end] ';
+	content: " [deletion end] ";
 }
 
 ins {
@@ -674,11 +785,11 @@ ins:after {
 }
 
 ins:before {
-	content: ' [insertion start] ';
+	content: " [insertion start] ";
 }
 
 ins:after {
-	content: ' [insertion end] ';
+	content: " [insertion end] ";
 }
 
 mark {
@@ -703,82 +814,25 @@ dfn {
 	cursor: help;
 }
 
-a {
-	position: relative;
-	display: inline-block;
-	margin: 0;
-	padding: 0 4px;
-	cursor: pointer;
-	text-decoration: none;
-	color: var(--primary-1);
-}
-
+a,
 a:before,
 a:after {
-	position: absolute;
-	z-index: -1;
-	display: block;
-	content: '';
+	background: none;
+	border: none;
+	padding: 0;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: var(--primary-2);
+	transition: text-decoration-color 0.1s ease;
+	color: var(--primary-2);
 }
 
-a:before {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transition: 100ms ease-out 50ms;
-	transform-origin: 0 25px;
-	background: var(--highlight-color);
-}
-
-a:after {
-	right: -4.5px;
-	bottom: 4.75px;
-	transition: 50ms ease-out;
-	transform: scaleX(1);
-	transform-origin: left center;
-	border: 7px solid transparent;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	a:hover,
-	a:active,
-	a:focus-visible {
-		outline: none;
-		color: var(--primary-2);
-	}
-
-	a:hover:before,
-	a:active:before,
-	a:focus-visible:before {
-		transition: 100ms ease-out;
-		transform: scaleY(0.15);
-		background: var(--accent-2);
-	}
-
-	a:after {
-		right: -14px;
-		transition: transform 50ms ease-out 100ms;
-		transform: none;
-	}
-
-	a:hover:after,
-	a:active:after,
-	a:focus-visible:after {
-		border-left-color: var(--accent-2);
-	}
-}
-
-@media (max-width: 375px) {
-	a:before {
-		transform-origin: 0 17.5px;
-	}
-
-	a:after {
-		right: -10px;
-		bottom: 1px;
-		border: 5.5px solid transparent;
-	}
+a:hover,
+a:hover:before,
+a:hover:after {
+	background: none;
+	border: none;
+	text-decoration-color: var(--accent-2);
 }
 
 sup a {
@@ -821,6 +875,10 @@ blockquote {
 	padding: 1.25px 0 1.25px 10px;
 	color: var(--primary-2);
 	border-left: 8px solid var(--accent-2);
+}
+
+blockquote p {
+	margin: 2.5px 0;
 }
 
 blockquote footer {

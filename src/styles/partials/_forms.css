@@ -11,9 +11,9 @@ form {
 
 form header {
 	background: linear-gradient(
-		120deg,
-		var(--highlight-color) 0,
-		var(--highlight-color) 100%
+	120deg,
+	var(--highlight-color) 0,
+	var(--highlight-color) 100%
 	);
 	background-position: 0 42.5%;
 	background-repeat: no-repeat;
@@ -143,7 +143,7 @@ form input:disabled {
 	cursor: not-allowed;
 }
 
-form input[type='button'] {
+form input[type="button"] {
 	background: var(--background-2);
 	border: none;
 	border-radius: 0.5rem;
@@ -161,22 +161,22 @@ form input[type='button'] {
 	z-index: 10;
 }
 
-form input[type='button']:hover,
-form input[type='button']:active,
-form input[type='button']:focus-visible {
+form input[type="button"]:hover,
+form input[type="button"]:active,
+form input[type="button"]:focus-visible {
 	background-color: var(--background-1);
 }
 
-form input[type='button']:disabled:hover {
+form input[type="button"]:disabled:hover {
 	background-color: var(--background-2);
 }
 
-form input[type='button']:disabled {
+form input[type="button"]:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
-form input[type='submit'] {
+form input[type="submit"] {
 	background: var(--background-2);
 	border: none;
 	border-radius: 0.5rem;
@@ -194,22 +194,22 @@ form input[type='submit'] {
 	z-index: 10;
 }
 
-form input[type='submit']:hover,
-form input[type='submit']:active,
-form input[type='submit']:focus-visible {
+form input[type="submit"]:hover,
+form input[type="submit"]:active,
+form input[type="submit"]:focus-visible {
 	background-color: var(--background-1);
 }
 
-form input[type='submit']:disabled:hover {
+form input[type="submit"]:disabled:hover {
 	background-color: var(--background-2);
 }
 
-form input[type='submit']:disabled {
+form input[type="submit"]:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
-form input[type='reset'] {
+form input[type="reset"] {
 	background: var(--background-2);
 	border: none;
 	border-radius: 0.5rem;
@@ -227,23 +227,23 @@ form input[type='reset'] {
 	z-index: 10;
 }
 
-form input[type='reset']:hover,
-form input[type='reset']:active,
-form input[type='reset']:focus-visible {
+form input[type="reset"]:hover,
+form input[type="reset"]:active,
+form input[type="reset"]:focus-visible {
 	background-color: var(--background-1);
 }
 
-form input[type='reset']:disabled:hover {
+form input[type="reset"]:disabled:hover {
 	background-color: var(--background-2);
 }
 
-form input[type='reset']:disabled {
+form input[type="reset"]:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
-form input[type='checkbox'],
-form input[type='radio'] {
+form input[type="checkbox"],
+form input[type="radio"] {
 	font: inherit;
 	display: grid;
 	width: 20px;
@@ -258,48 +258,48 @@ form input[type='radio'] {
 	cursor: pointer;
 }
 
-form input[type='checkbox'] {
+form input[type="checkbox"] {
 	border-radius: 25%;
 }
 
-form input[type='radio'] {
+form input[type="radio"] {
 	border-radius: 50%;
 }
 
-form input[type='checkbox']:before,
-form input[type='radio']:before {
+form input[type="checkbox"]:before,
+form input[type="radio"]:before {
 	width: 12px;
 	height: 12px;
-	content: '';
+	content: "";
 	transition: 120ms transform ease-in-out;
 	transform: scale(0);
 	box-shadow: inset 10px 10px var(--accent-2);
 	cursor: pointer;
 }
 
-form input[type='checkbox']:before {
+form input[type="checkbox"]:before {
 	border-radius: 25%;
 	transform-origin: bottom left;
 	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
-form input[type='radio']:before {
+form input[type="radio"]:before {
 	border-radius: 50%;
 }
 
-form input[type='checkbox']:checked:before,
-form input[type='radio']:checked:before {
+form input[type="checkbox"]:checked:before,
+form input[type="radio"]:checked:before {
 	transform: scale(1);
 }
 
-form input[type='checkbox']:disabled,
-form input[type='radio']:disabled {
+form input[type="checkbox"]:disabled,
+form input[type="radio"]:disabled {
 	border-color: var(--background-1);
 	background-color: var(--background-3);
 }
 
-form input[type='checkbox'] + label,
-form input[type='radio'] + label {
+form input[type="checkbox"] + label,
+form input[type="radio"] + label {
 	font-family: var(--font-display);
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -312,8 +312,8 @@ form input[type='radio'] + label {
 	cursor: pointer;
 }
 
-form input[type='checkbox']:disabled + label,
-form input[type='radio']:disabled + label {
+form input[type="checkbox"]:disabled + label,
+form input[type="radio"]:disabled + label {
 	color: var(--primary-3);
 	cursor: not-allowed;
 }
@@ -331,25 +331,25 @@ form input[type='radio']:disabled + label {
 		margin-top: -16px;
 	}
 
-	form input[type='checkbox'],
-	form input[type='radio'] {
+	form input[type="checkbox"],
+	form input[type="radio"] {
 		width: 15px;
 		height: 15px;
 		transform: translateY(3px);
 	}
 
-	form input[type='checkbox']:before,
-	form input[type='radio']:before {
+	form input[type="checkbox"]:before,
+	form input[type="radio"]:before {
 		width: 10px;
 		height: 10px;
 	}
 }
 
-form input[type='date'],
-form input[type='datetime-local'],
-form input[type='month'],
-form input[type='time'],
-form input[type='week'] {
+form input[type="date"],
+form input[type="datetime-local"],
+form input[type="month"],
+form input[type="time"],
+form input[type="week"] {
 	cursor: text;
 }
 
@@ -365,17 +365,17 @@ form input::-webkit-calendar-picker-indicator:hover {
 	opacity: 1;
 }
 
-form input[type='number']::-webkit-outer-spin-button,
-form input[type='number']::-webkit-inner-spin-button {
+form input[type="number"]::-webkit-outer-spin-button,
+form input[type="number"]::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
 
-form input[type='number'] {
+form input[type="number"] {
 	-moz-appearance: textfield;
 }
 
-form input[type='range'] {
+form input[type="range"] {
 	-webkit-appearance: none;
 	background: transparent;
 	width: 75%;
@@ -384,11 +384,11 @@ form input[type='range'] {
 	padding: 0;
 }
 
-form input[type='range']:focus {
+form input[type="range"]:focus {
 	outline: none;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
 	width: 80%;
 	height: 24px;
 	cursor: pointer;
@@ -396,7 +396,7 @@ input[type='range']::-webkit-slider-runnable-track {
 	border-radius: 100px;
 }
 
-form input[type='range']::-webkit-slider-thumb {
+form input[type="range"]::-webkit-slider-thumb {
 	height: 36px;
 	width: 36px;
 	border-radius: 50%;
@@ -406,18 +406,18 @@ form input[type='range']::-webkit-slider-thumb {
 	margin-top: -6px;
 }
 
-form input[type='range']:hover::-webkit-slider-thumb {
+form input[type="range"]:hover::-webkit-slider-thumb {
 	background: var(--accent-1);
 	margin-top: -6px;
 }
 
-form input[type='range']:active::-webkit-slider-thumb,
-form input[type='range']:focus-visible::-webkit-slider-thumb {
+form input[type="range"]:active::-webkit-slider-thumb,
+form input[type="range"]:focus-visible::-webkit-slider-thumb {
 	background: var(--accent-2);
 	margin-top: -6px;
 }
 
-form input[type='range']::-moz-range-track {
+form input[type="range"]::-moz-range-track {
 	width: 80%;
 	height: 24px;
 	cursor: pointer;
@@ -425,7 +425,7 @@ form input[type='range']::-moz-range-track {
 	border-radius: 100px;
 }
 
-form input[type='range']::-moz-range-thumb {
+form input[type="range"]::-moz-range-thumb {
 	height: 36px;
 	width: 36px;
 	border: none;
@@ -435,16 +435,16 @@ form input[type='range']::-moz-range-thumb {
 	-webkit-appearance: none;
 }
 
-form input[type='range']:hover::-moz-range-thumb {
+form input[type="range"]:hover::-moz-range-thumb {
 	background: var(--primary-3);
 }
 
-form input[type='range']:active::-moz-range-thumb,
-form input[type='range']:focus-visible::-moz-range-thumb {
+form input[type="range"]:active::-moz-range-thumb,
+form input[type="range"]:focus-visible::-moz-range-thumb {
 	background: var(--primary-1);
 }
 
-form input[type='range']::-ms-track {
+form input[type="range"]::-ms-track {
 	width: 80%;
 	height: 24px;
 	cursor: pointer;
@@ -452,15 +452,15 @@ form input[type='range']::-ms-track {
 	border-radius: 100px;
 }
 
-form input[type='range']::-ms-fill-lower {
+form input[type="range"]::-ms-fill-lower {
 	background: var(--background-2);
 }
 
-form input[type='range']::-ms-fill-upper {
+form input[type="range"]::-ms-fill-upper {
 	background: var(--background-2);
 }
 
-form input[type='range']::-ms-thumb {
+form input[type="range"]::-ms-thumb {
 	height: 36px;
 	width: 36px;
 	border: none;
@@ -470,66 +470,66 @@ form input[type='range']::-ms-thumb {
 	-webkit-appearance: none;
 }
 
-form input[type='range']:hover::-ms-thumb {
+form input[type="range"]:hover::-ms-thumb {
 	background: var(--primary-3);
 }
 
-form input[type='range']:active::-ms-thumb,
-form input[type='range']:focus-visible::-ms-thumb {
+form input[type="range"]:active::-ms-thumb,
+form input[type="range"]:focus-visible::-ms-thumb {
 	background: var(--primary-1);
 }
 
 @media (--breakpoint-mobile) {
-	form input[type='range'] {
+	form input[type="range"] {
 		width: 60%;
 		height: 30px;
 	}
 
-	form input[type='range']::-webkit-slider-runnable-track {
+	form input[type="range"]::-webkit-slider-runnable-track {
 		height: 18px;
 	}
 
-	form input[type='range']::-webkit-slider-thumb {
+	form input[type="range"]::-webkit-slider-thumb {
 		height: 24px;
 		width: 24px;
 		margin-top: -3px;
 	}
 
-	form input[type='range']:hover::-webkit-slider-thumb {
+	form input[type="range"]:hover::-webkit-slider-thumb {
 		margin-top: -3px;
 	}
 
-	form input[type='range']:active::-webkit-slider-thumb,
-	form input[type='range']:focus-visible::-webkit-slider-thumb {
+	form input[type="range"]:active::-webkit-slider-thumb,
+	form input[type="range"]:focus-visible::-webkit-slider-thumb {
 		margin-top: -3px;
 	}
 
-	form input[type='range']::-moz-range-track {
+	form input[type="range"]::-moz-range-track {
 		height: 18px;
 	}
 
-	form input[type='range']::-ms-track {
+	form input[type="range"]::-ms-track {
 		height: 18px;
 	}
 }
 
-form input[type='file'] {
+form input[type="file"] {
 	cursor: pointer;
 }
 
-form input[type='file']::-webkit-file-upload-button {
+form input[type="file"]::-webkit-file-upload-button {
 	width: 0;
 	padding: 0;
 	display: none;
 }
 
-form input[type='file']::file-selector-button {
+form input[type="file"]::file-selector-button {
 	width: 0;
 	padding: 0;
 	display: none;
 }
 
-form input[type='file']::-ms-browse {
+form input[type="file"]::-ms-browse {
 	width: 0;
 	padding: 0;
 	display: none;
@@ -585,7 +585,7 @@ form label + select {
 	outline: none;
 	background: var(--background-2);
 	display: grid;
-	grid-template-areas: 'select';
+	grid-template-areas: "select";
 	cursor: pointer;
 }
 

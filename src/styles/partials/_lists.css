@@ -20,7 +20,7 @@ ul > li:before {
 	left: 0;
 	width: 5px;
 	height: 5px;
-	content: '';
+	content: "";
 	transform: rotate(45deg);
 	border: 1px solid var(--accent-2);
 	border-width: 2px 2px 0 0;
@@ -29,6 +29,72 @@ ul > li:before {
 @media (--breakpoint-mobile) {
 	ul > li:before {
 		top: 8px;
+	}
+}
+
+ul input ~ li:before {
+	list-style-type: none;
+}
+
+ul input[type="checkbox"] {
+	font: inherit;
+	display: inline-grid;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	margin-right: 10px;
+	color: var(--background-3);
+	border: 2px solid var(--primary-2);
+	background: var(--background-3);
+	appearance: none;
+	place-content: center;
+	cursor: pointer;
+}
+
+ul input[type="checkbox"] {
+	border-radius: 25%;
+}
+
+ul input[type="checkbox"]:before {
+	width: 12px;
+	height: 12px;
+	content: "";
+	transition: 120ms transform ease-in-out;
+	transform: scale(0);
+	box-shadow: inset 10px 10px var(--accent-2);
+	cursor: pointer;
+}
+
+ul input[type="checkbox"]:before {
+	border-radius: 25%;
+	transform-origin: bottom left;
+	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+ul input[type="checkbox"]:checked:before {
+	transform: scale(1);
+}
+
+ul input[type="checkbox"]:disabled {
+	border-color: var(--background-1);
+	background-color: var(--background-3);
+}
+
+ul input[type="checkbox"]:disabled + label {
+	color: var(--primary-3);
+	cursor: not-allowed;
+}
+
+@media (--breakpoint-mobile) {
+	ul input[type="checkbox"] {
+		width: 15px;
+		height: 15px;
+		transform: translateY(3px);
+	}
+
+	ul input[type="checkbox"]:before {
+		width: 10px;
+		height: 10px;
 	}
 }
 
@@ -58,7 +124,7 @@ ol > li:before {
 	left: -4px;
 	width: 5px;
 	height: 5px;
-	content: counter(item) ')';
+	content: counter(item) ")";
 	color: var(--accent-2);
 }
 
@@ -131,31 +197,34 @@ address a:after {
 	border: none;
 }
 
-address a[href^='mailto\:']:before {
-	content: '📧 ';
+address a[href^="mailto\:"]:before {
+	content: "📧 ";
 	display: inline-block;
 	position: relative;
 	transform-origin: center;
 	width: 25px;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
-address a[href^='tel\:']:before {
-	content: '📞 ';
+address a[href^="tel\:"]:before {
+	content: "📞 ";
 	display: inline-block;
 	position: relative;
 	transform-origin: center;
 	width: 25px;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
-address a[href^='sms\:']:before {
-	content: '💬 ';
+address a[href^="sms\:"]:before {
+	content: "💬 ";
 	display: inline-block;
 	position: relative;
 	transform-origin: center;
 	width: 25px;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
 @keyframes shake {

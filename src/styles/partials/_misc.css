@@ -10,18 +10,21 @@ hr {
 .theme-toggle-btn {
 	background: none;
 	border: none;
-	width: auto;
-	height: auto;
+	height: 75px;
+	width: 75px;
+	min-width: 75px;
 	margin: 0;
 	padding: 0;
 	position: fixed;
-	top: 125px;
-	margin-left: -215px;
-	font-size: 3.6rem;
+	margin-left: -275px;
+	font-size: 2.4rem;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
 }
 
 .theme-toggle-btn:hover {
-	width: auto;
+	width: 75px;
 }
 
 @media (--breakpoint-mobile-outer) {
@@ -32,5 +35,14 @@ hr {
 		margin-bottom: 10px;
 		position: relative;
 		float: right;
+		width: 48px;
+		height: 48px;
+		min-width: 48px;
+	}
+
+	.theme-toggle-btn:hover {
+		width: 48px;
+		height: 48px;
+		min-width: 48px;
 	}
 }

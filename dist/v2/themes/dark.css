@@ -14,5 +14,5 @@
 	--marked-color: rgba(68, 50, 100, 0.8);
 	--selection-color: rgba(15, 154, 210, 0.2);
 	--date-icon-filter: invert(87%) sepia(35%) saturate(1833%)
-		hue-rotate(161deg) brightness(77%) contrast(83%);
+	hue-rotate(161deg) brightness(77%) contrast(83%);
 }

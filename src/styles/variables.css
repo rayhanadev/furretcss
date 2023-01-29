@@ -1,13 +1,13 @@
 :root,
 ::before,
 ::after {
-	--font-display: 'Outfit', -apple-system, blinkmacsystemfont, 'Segoe UI',
-		roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol';
-	--font-body: 'Outfit', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
-		helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-		'Segoe UI Symbol';
-	--font-monospace: 'DM Mono', monospace;
+	--font-display: "Outfit", -apple-system, blinkmacsystemfont, "Segoe UI",
+	roboto, helvetica, arial, sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol";
+	--font-body: "Outfit", -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+	helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+	"Segoe UI Symbol";
+	--font-monospace: "DM Mono", monospace;
 }
 
 @custom-media --breakpoint-mobile (max-width: 500px);
