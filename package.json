@@ -1,6 +1,6 @@
 {
 	"name": "furret.css",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"description": "A lightweight, beautiful stylesheet that allows for high-quality, semantically correct HTML markup.",
 	"main": "./dist/v2/full/light.min.css",
 	"exports": {
